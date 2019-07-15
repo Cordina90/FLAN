@@ -1,4 +1,4 @@
-ANTENNA_SIGNAL_SLOTS = 5
+ANTENNA_SIGNAL_SLOTS = settings.startup["flan-slots"].value
 
 require("prototypes.entities")
 -- require("prototypes.gui")

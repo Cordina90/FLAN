@@ -1,0 +1,13 @@
+Version 0.17.1
+Date: July 15. 2019
+
+  Changes:
+    -  Added second tier of antenna's with double slots
+	-  Adedd setting to change the number of signal slots
+--------------------------------------------------------------------------------------
+Version 0.17.0
+Date: March 09. 2019
+
+  Changes:
+	-  Updated to work with Factorio 0.17.x
+

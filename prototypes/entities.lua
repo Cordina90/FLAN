@@ -8,7 +8,8 @@ empty_sprite =
 
 antenna = util.table.deepcopy(data.raw["constant-combinator"]["constant-combinator"])
 antenna.name = "flantenna"
-antenna.icon = "__FLAN__/graphics/icons/flantenna.png"
+antenna.icon = "__Factorio-LAN__/graphics/icons/flantenna.png"
+antenna.icon_size = 32
 antenna.minable.result = "flantenna"
 antenna.collision_box = {{-0.15, -0.15}, {0.15, 0.15}}
 antenna.drawing_box = {{-0.6, -3.2}, {0.6, 0.6}}
@@ -17,7 +18,7 @@ antenna.sprites =
 {
   north =
   {
-    filename = "__FLAN__/graphics/entity/flantenna/flantenna.png",
+    filename = "__Factorio-LAN__/graphics/entity/flantenna/flantenna.png",
     width = 140,
     height = 140,
     frame_count = 1,
@@ -29,9 +30,9 @@ antenna.sprites.south = antenna.sprites.north
 antenna.sprites.west = antenna.sprites.north
 antenna_activity_sprite =
 {
-  filename = "__base__/graphics/entity/combinator/activity-leds/combinator-led-arithmetic-west.png",
-  width = 13,
-  height = 11,
+  filename = "__base__/graphics/entity/combinator/activity-leds/arithmetic-combinator-LED-W.png",
+  width = 16,
+  height = 8,
   frame_count = 1
 }
 antenna.activity_led_sprites =
@@ -71,7 +72,8 @@ antenna.circuit_wire_connection_points =
 }
 antenna_psu = util.table.deepcopy(data.raw["electric-energy-interface"]["electric-energy-interface"])
 antenna_psu.name = "flantenna-power-supply"
-antenna_psu.icon = "__FLAN__/graphics/icons/flantenna.png"
+antenna_psu.icon = "__Factorio-LAN__/graphics/icons/flantenna.png"
+antenna_psu.icon_size = 32
 antenna_psu.flags = {"not-deconstructable"}
 antenna_psu.minable = nil
 antenna_psu.max_health = antenna.max_health
@@ -96,5 +98,27 @@ antenna_psu.order = "z"
 
 data:extend({
   antenna,
-  antenna_psu
+  antenna_psu,
+})
+
+antenna2 = deepcopy(antenna)
+antenna2.name = "flantenna2"
+antenna2.item_slot_count = ANTENNA_SIGNAL_SLOTS * 2
+
+antenna2_psu = deepcopy(antenna_psu)
+antenna2_psu.name = "flantenna2-power-supply"
+antenna2_psu.energy_source =
+{
+  type = "electric",
+  buffer_capacity = "1.6kJ",
+  usage_priority = "secondary-input",
+  input_flow_limit = "200kW",
+  -- output_flow_limit = "1500kW"
+}
+antenna2_psu.energy_production = "0kW"
+antenna2_psu.energy_usage = "100kW"
+
+data:extend({
+  antenna2,
+  antenna2_psu,
 })

@@ -1,8 +1,9 @@
 {
-	"name": "FLAN",
-	"version": "1.0.3",
+	"name": "Factorio-LAN",
+	"version": "0.17.1",
 	"title": "FLAN",
-	"author": "GotLag",
+	"author": "GotLag, updated to 0.17 by Cordina",
 	"description": "Factorio LAN: adds wireless antennas for circuit networks",
-	"factorio_version": "0.14"
+	"factorio_version": "0.17",
+	"dependencies": ["base >= 0.17.35", "? bobelectronics >= 0.17.0", "? bobplates >= 0.17.0"]
 }

@@ -1,6 +1,6 @@
 MOD_NAME = "FLAN"
-CURRENT_VERSION = "1.0.3"
-FACTORIO_VERSION = "0.14"
+CURRENT_VERSION = "0.17.1"
+FACTORIO_VERSION = "0.17"
 REBUILD_REQUIRED_VERSION = "1.0.1"
 ENTITY_NAME = "flantenna"
 TECHNOLOGY_NAME = "flan-technology"
@@ -103,7 +103,7 @@ function remove_antenna(dead_antenna)
   end
 end
 
-script.on_event(defines.events.on_preplayer_mined_item, function(event)
+script.on_event(defines.events.on_pre_player_mined_item, function(event)
   if event.entity.name == ENTITY_NAME then
     remove_antenna(event.entity)
   end
