@@ -101,11 +101,11 @@ data:extend({
   antenna_psu,
 })
 
-antenna2 = deepcopy(antenna)
+antenna2 = util.table.deepcopy(antenna)
 antenna2.name = "flantenna2"
 antenna2.item_slot_count = ANTENNA_SIGNAL_SLOTS * 2
 
-antenna2_psu = deepcopy(antenna_psu)
+antenna2_psu = util.table.deepcopy(antenna_psu)
 antenna2_psu.name = "flantenna2-power-supply"
 antenna2_psu.energy_source =
 {
